@@ -1,9 +1,9 @@
 package lasten.cardgame.gamelogic
 
 
-class Match (private val player: Person, private val opponent: Person) {
-    val playerDeck: Deck = shuffle(player.decklist)
-    val opponentDeck: Deck = shuffle(opponent.decklist)
+class Match (private val playerDecklist: Decklist, private val opponentDecklist: Decklist) {
+    val playerDeck: Deck = shuffle(playerDecklist)
+    val opponentDeck: Deck = shuffle(opponentDecklist)
 
 }
 

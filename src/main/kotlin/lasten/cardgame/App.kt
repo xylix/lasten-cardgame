@@ -1,13 +1,7 @@
 package lasten.cardgame
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello world."
-        }
-}
+class App
 
 fun main(args: Array<String>) {
     Game.start()
-    println(App().greeting)
 }

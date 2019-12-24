@@ -4,11 +4,15 @@ import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.layout.GridPane
 import javafx.stage.Stage
+import lasten.cardgame.JsonUtils.loadDecklist
+import lasten.cardgame.gamelogic.Decklist
 import lasten.cardgame.gamelogic.Match
 
 class Game : Application() {
     override fun start(stage: Stage) {
-        stage.scene = toScene(Match())
+        val playerDecklist = loadDecklist("1.json")
+        val opponentDecklist = loadDecklist("1.json")
+        stage.scene = toScene(Match(playerDecklist, opponentDecklist))
         stage.show()
     }
     
