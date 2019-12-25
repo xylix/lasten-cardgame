@@ -14,7 +14,6 @@ class Game : Application() {
     }
     
     companion object {
-        const val WIDTH = 720.00
         @JvmStatic
         fun start() {
             launch(Game::class.java)

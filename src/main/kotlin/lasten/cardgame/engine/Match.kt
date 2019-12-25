@@ -6,14 +6,17 @@ import javafx.scene.control.Label
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.shape.Rectangle
-import lasten.cardgame.Game.Companion.WIDTH
+import lasten.cardgame.CARD_HEIGHT
+import lasten.cardgame.HEIGHT
+import lasten.cardgame.STARTING_CARDS
+import lasten.cardgame.WIDTH
 
 
 class Match (playerDecklist: Decklist, opponentDecklist: Decklist) {
     val playerDeck: Deck = shuffle(playerDecklist)
     val opponentDeck: Deck = shuffle(opponentDecklist)
-    val playerHand = playerDeck.draw(3)
-    val opponentHand = opponentDeck.draw(3)
+    val playerHand = playerDeck.draw(STARTING_CARDS)
+    val opponentHand = opponentDeck.draw(STARTING_CARDS)
 
 
     fun toScene() : Scene {
@@ -24,9 +27,9 @@ class Match (playerDecklist: Decklist, opponentDecklist: Decklist) {
         val opponentHandArea = handToNode("Opponent's hand", opponentHand)
 
         pane.children.add(opponentHandArea)
-        pane.children.add(Rectangle(WIDTH, 200.00))
+        pane.children.add(Rectangle(WIDTH, CARD_HEIGHT))
         pane.children.add(handArea)
-        return Scene(pane, WIDTH, 560.00)
+        return Scene(pane, WIDTH, HEIGHT)
     }
 
     private fun handToNode(label: String, cards: Array<Card>): Node {
