@@ -1,6 +1,8 @@
-[
+{
+  "cards":
   {
-    "id": "dummy",
-    "amount": 2
+    "dummy": 4,
+    "test": 4,
+    "sample": 4
   }
-]
+}

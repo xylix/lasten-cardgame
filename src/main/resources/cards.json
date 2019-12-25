@@ -1,0 +1,24 @@
+[
+  {
+    "id": "dummy",
+    "text": "This is a dummy card.",
+    "rules": {
+      "cost": "0",
+      "effect": ""
+    }
+  },
+  {
+    "id": "test",
+    "text": "This is a test card.",
+    "rules": {
+    }
+  },
+  {
+    "id": "sample",
+    "text": "This is the Sample card",
+    "rules": {
+
+    }
+  }
+]
+
