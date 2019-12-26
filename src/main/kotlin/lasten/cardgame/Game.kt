@@ -2,7 +2,7 @@ package lasten.cardgame
 
 import javafx.application.Application
 import javafx.stage.Stage
-import lasten.cardgame.JsonUtils.loadDecklist
+import lasten.cardgame.FileUtils.loadDecklist
 import lasten.cardgame.engine.Match
 
 class Game : Application() {
@@ -12,7 +12,7 @@ class Game : Application() {
         stage.scene = Match(playerDecklist, opponentDecklist).toScene()
         stage.show()
     }
-    
+
     companion object {
         @JvmStatic
         fun start() {

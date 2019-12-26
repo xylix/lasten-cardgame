@@ -1,8 +1,8 @@
 {
   "cards":
   {
-    "dummy": 4,
+    "skeleton": 4,
     "test": 4,
-    "sample": 4
+    "bolt": 4
   }
 }

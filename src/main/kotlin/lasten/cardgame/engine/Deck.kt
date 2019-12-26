@@ -1,8 +1,7 @@
 package lasten.cardgame.engine
 
 import kotlinx.serialization.Serializable
-import lasten.cardgame.JsonUtils.loadCard
-
+import lasten.cardgame.FileUtils.loadCard
 
 @Serializable
 data class Decklist (val cards: Map<String, Int>)

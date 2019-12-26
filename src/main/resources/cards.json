@@ -1,7 +1,8 @@
 [
   {
-    "id": "dummy",
-    "text": "This is a dummy card.",
+    "id": "skeleton",
+    "text": "This is a skeleton trumpeto card.",
+    "graphics": "skeleton.gif",
     "rules": {
       "cost": "0",
       "effect": ""
@@ -10,14 +11,15 @@
   {
     "id": "test",
     "text": "This is a test card.",
+    "graphics": "404.png",
     "rules": {
     }
   },
   {
-    "id": "sample",
-    "text": "This is the Sample card",
+    "id": "bolt",
+    "text": "A bolt.",
+    "graphics": "bolt.png",
     "rules": {
-
     }
   }
 ]
