@@ -1,12 +1,12 @@
 package lasten.cardgame.engine
 
 import kotlinx.serialization.Serializable
-import lasten.cardgame.FileUtils.loadCard
+import lasten.cardgame.FileLoading.loadCard
 
 @Serializable
-data class Decklist (val cards: Map<String, Int>)
+data class Decklist(val cards: Map<String, Int>)
 
-class Deck (decklist: Map<String, Int>) {
+class Deck(decklist: Map<String, Int>) {
     private val deckState = mutableListOf<Card>()
     init {
         for ((key, value) in decklist) {
@@ -21,10 +21,7 @@ class Deck (decklist: Map<String, Int>) {
         deckState.shuffle()
     }
 
-    fun draw(amount: Int): Array<Card> {
-        val cards = Array(amount) { draw() }
-        return cards
-    }
+    fun draw(amount: Int): Array<Card> = Array(amount) { draw() }
 
     private fun draw(): Card {
         return deckState.removeAt(0)

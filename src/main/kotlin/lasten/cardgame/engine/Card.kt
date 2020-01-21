@@ -10,14 +10,14 @@ import lasten.cardgame.CARD_BACKGROUND
 import lasten.cardgame.CARD_BORDER
 import lasten.cardgame.CARD_HEIGHT
 import lasten.cardgame.CARD_WIDTH
-import lasten.cardgame.FileUtils.loadGraphic
+import lasten.cardgame.FileLoading.loadGraphic
 import org.tinylog.kotlin.Logger
 
 @Serializable
-data class Card(val id: String, val text: String, val rules: Map<String, String>, val graphics: String?) {
+data class Card(val id: String, val text: String, val rules: Map<String, String>, val graphics: String = "404.png") {
     fun toNode(): Node {
         val textBox = Label(text).also { it.minHeight = 40.00 }
-        return CardBox(Label(id), loadGraphic(graphics!!), textBox)
+        return CardBox(Label(id), loadGraphic(graphics), textBox)
     }
 }
 
@@ -30,4 +30,3 @@ class CardBox(vararg children: Node?) : VBox(*children) {
         onMouseClicked = EventHandler { event: MouseEvent -> Logger.trace("MouseEvent: ${event.target}") }
     }
 }
-

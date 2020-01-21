@@ -11,7 +11,7 @@ import org.tinylog.kotlin.Logger
 import java.io.File
 import java.net.URL
 
-object FileUtils {
+object FileLoading {
     private const val cardPath = "cards.json"
     private const val decklistPath = "decklists/"
     private val json = Json(JsonConfiguration.Stable)
@@ -45,7 +45,7 @@ object FileUtils {
      */
     private fun getResource(resourceName: String): URL {
         val loader: ClassLoader =
-                Thread.currentThread().contextClassLoader?: FileUtils.javaClass.classLoader
+                Thread.currentThread().contextClassLoader?: FileLoading.javaClass.classLoader
         val url: URL? = loader.getResource(resourceName)
         return url ?: throw NullPointerException("resource $resourceName not found.")
     }

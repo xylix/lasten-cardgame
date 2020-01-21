@@ -2,7 +2,7 @@ package lasten.cardgame
 
 import javafx.application.Application
 import javafx.stage.Stage
-import lasten.cardgame.FileUtils.loadDecklist
+import lasten.cardgame.FileLoading.loadDecklist
 import lasten.cardgame.engine.Match
 
 class Game : Application() {

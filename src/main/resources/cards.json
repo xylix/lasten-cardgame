@@ -10,8 +10,7 @@
   },
   {
     "id": "test",
-    "text": "This is a test card.",
-    "graphics": "404.png",
+    "text": "This is a test card with no associated graphics",
     "rules": {
     }
   },

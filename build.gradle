@@ -35,6 +35,10 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
+tasks.distZip.enabled = false
+tasks.distTar.enabled = false
+build.dependsOn installDist
+
 application {
     // Define the main class for the application.
     mainClassName = 'lasten.cardgame.AppKt'

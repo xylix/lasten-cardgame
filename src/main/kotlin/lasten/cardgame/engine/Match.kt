@@ -11,17 +11,16 @@ import lasten.cardgame.CARD_HEIGHT
 import lasten.cardgame.STARTING_CARDS
 import lasten.cardgame.WIDTH
 
-class Match (playerDecklist: Decklist, opponentDecklist: Decklist) {
+class Match(playerDecklist: Decklist, opponentDecklist: Decklist) {
     val playerDeck: Deck = shuffle(playerDecklist)
     val opponentDeck: Deck = shuffle(opponentDecklist)
     val playerHand = playerDeck.draw(STARTING_CARDS)
     val opponentHand = opponentDeck.draw(STARTING_CARDS)
 
-
-    fun toScene() : Scene {
+    fun toScene(): Scene {
         val pane = VBox()
                 .also { it.spacing = 4.0 }
-                .also { it.background =  BOARD_BACKGROUND }
+                .also { it.background = BOARD_BACKGROUND }
         val handArea = handToNode("Player's hand", playerHand)
         val opponentHandArea = handToNode("Opponent's hand", opponentHand)
 
@@ -43,5 +42,4 @@ class Match (playerDecklist: Decklist, opponentDecklist: Decklist) {
         }
     }
 }
-
 
